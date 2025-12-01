@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: axiom-hive
+  namespace: production
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: axiom-hive
+  template:
+    metadata:
+      labels:
+        app: axiom-hive
+    spec:
+      containers:
+      - name: axiom-hive
+        image: axiomhive/core:1.0.0
+        ports:
+        - containerPort: 8080
+        env:
+        - name: AXIOM_VERSION
+          value: "current"
+        - name: PYTHONHASHSEED
+          value: "0"
+        livenessProbe:
+          httpGet: { path: /health, port: 8080 }
+          initialDelaySeconds: 10
+          periodSeconds: 30
+        readinessProbe:
+          httpGet: { path: /health, port: 8080 }
+          initialDelaySeconds: 5
+          periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: axiom-hive-service
+  namespace: production
+spec:
+  selector:
+    app: axiom-hive
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
