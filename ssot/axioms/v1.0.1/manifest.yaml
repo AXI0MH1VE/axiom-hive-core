@@ -1,0 +1,7 @@
+version: 1.0.1
+authority: system_operator
+created_at: 2025-09-06T21:42:29Z
+files:
+  - axioms.json
+  - axioms.fol
+signature: signature.sig

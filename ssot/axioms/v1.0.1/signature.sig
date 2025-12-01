@@ -1,0 +1,1 @@
+# Placeholder; regenerate via ssot/sign_axioms.py

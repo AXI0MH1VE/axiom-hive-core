@@ -1,0 +1,6 @@
+{
+  "rules": [
+    { "id": "R_MODUS", "name": "modus_ponens", "sound": true },
+    { "id": "R_UI", "name": "universal_instantiation", "sound": true }
+  ]
+}

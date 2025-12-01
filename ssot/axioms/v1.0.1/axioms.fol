@@ -1,0 +1,3 @@
+# First-order logic encoding (placeholder examples)
+# AX001: ForAll x. Entity(x) -> HasIdentifier(x)
+# AX002: ForAll x,y. TransactionFrom(x,y) -> Balance(x) >= Amount(y)
