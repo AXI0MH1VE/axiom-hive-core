@@ -1,0 +1,17 @@
+{
+  "facts": [
+    {
+      "id": "KB001",
+      "category": "drug_interaction",
+      "statement": "Co-administration of Drug A and Drug B is contraindicated.",
+      "source": "Regulatory Bulletin 2025-11"
+    },
+    {
+      "id": "KB002",
+      "category": "finance_policy",
+      "statement": "Transaction limits for Tier-2 accounts are capped at 1000 units per 24h.",
+      "source": "Policy Doc FIN-1002"
+    }
+  ],
+  "kb_hash": "sha256:demo_kb_hash"
+}

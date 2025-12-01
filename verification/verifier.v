@@ -1,0 +1,1 @@
+(* Placeholder Coq file for future formalization of minimal proof checker correctness *)
